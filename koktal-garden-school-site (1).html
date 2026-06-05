@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Частная начальная школа полного дня в Астане: трёхъязычное обучение KZ·RU·EN, классы до 12 учеников, Pearson Math, система Л.Г. Петерсон, кружки и питание."/>
+<meta name="theme-color" content="#0D4428"/>
+<title>Koktal Garden School — Качественное начальное образование в Астане</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,500&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+<style>
+/* ── DESIGN SYSTEM ───────────────────────────────────────── */
+:root {
+  --green:       #0D4428;
+  --green-md:    #0B3A22;
+  --green-dark:  #08301C;
+  --green-xdark: #03160D;
+  --gold:        #D4AF37;
+  --gold-light:  #E1C254;
+  --gold-dark:   #B6942A;
+  --gold-xdark:  #917420;
+  --off-white:   #F8F9FA;
+  --slate:       #334155;
+  --slate-muted: #64748B;
+  --white:       #ffffff;
+  --radius-sm:   10px;
+  --radius-md:   16px;
+  --radius-lg:   24px;
+  --radius-xl:   32px;
+  --shadow-card: 0 4px 24px -8px rgba(13,68,40,.16);
+  --shadow-hover:0 18px 48px -12px rgba(13,68,40,.28);
+  --shadow-nav:  0 2px 16px -6px rgba(13,68,40,.18);
+  --grad-hero:   linear-gradient(135deg, #03160D 0%, #08301C 45%, #0D4428 100%);
+  --grad-gold:   linear-gradient(135deg, #E1C254 0%, #D4AF37 50%, #B6942A 100%);
+  --font-serif:  'Lora', Georgia, serif;
+  --font-sans:   'PT Sans', 'Segoe UI', system-ui, sans-serif;
+  --max-w:       1200px;
+  --px:          clamp(1.25rem, 4vw, 2rem);
+  --section-py:  clamp(4rem, 7vw, 7rem);
+}
+
+/* ── RESET & BASE ────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+body {
+  font-family: var(--font-sans);
+  background: var(--off-white);
+  color: var(--slate);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul, ol { list-style: none; }
+button { cursor: pointer; font: inherit; border: none; background: none; }
+::selection { background: rgba(212,175,55,.3); color: var(--green); }
+h1,h2,h3,h4 { font-family: var(--font-serif); color: var(--green); text-wrap: balance; }
+
+/* ── UTILITIES ───────────────────────────────────────────── */
+.wrap     { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--px); width: 100%; }
+.sec      { padding: var(--section-py) 0; }
+.sec--white { background: var(--white); }
+.sec--green { background: var(--green); color: var(--off-white); }
+.sec--dark  { background: var(--green-xdark); color: var(--off-white); }
+.sr-only  { position: absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: .6rem;
+  font-size: .7rem; font-weight: 700; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--gold-xdark);
+}
+.eyebrow::before { content:''; display:block; width:2rem; height:1px; background:var(--gold); }
+.eyebrow--light { color: rgba(225,194,84,.85); }
+.eyebrow--light::before { background: rgba(212,175,55,.7); }
+.eyebrow--center { justify-content: center; }
+.eyebrow--center::before { display: none; }
+
+.grid-2  { display: grid; gap: 1.5rem; }
+.grid-3  { display: grid; gap: 1.5rem; }
+.grid-4  { display: grid; gap: 1rem; grid-template-columns: repeat(2,1fr); }
+@media(min-width:640px)  { .grid-4 { grid-template-columns: repeat(3,1fr); gap: 1.25rem; } }
+@media(min-width:768px)  { .grid-2 { grid-template-columns: repeat(2,1fr); } .grid-3 { grid-template-columns: repeat(3,1fr); } }
+@media(min-width:1024px) { .grid-4 { grid-template-columns: repeat(4,1fr); } }
+
+/* ── BUTTONS ─────────────────────────────────────────────── */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap:.5rem;
+  padding: .85rem 1.75rem; border-radius: 100px;
+  font-size: .875rem; font-weight: 700; line-height: 1;
+  transition: transform .25s, box-shadow .25s, background .25s, border-color .25s, color .25s;
+  white-space: nowrap;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn--gold   { background: var(--grad-gold); color: var(--green); box-shadow: var(--shadow-card); }
+.btn--gold:hover { box-shadow: var(--shadow-hover); }
+.btn--green  { background: var(--green); color: var(--off-white); box-shadow: var(--shadow-card); }
+.btn--green:hover { background: var(--green-md); box-shadow: var(--shadow-hover); }
+.btn--outline { border: 1.5px solid rgba(248,249,250,.3); color: var(--off-white); }
+.btn--outline:hover { border-color: var(--gold); color: var(--gold); }
+.btn--lg { padding: 1rem 2rem; font-size: 1rem; }
+.btn svg { width:1rem; height:1rem; flex-shrink:0; }
+
+/* ── NAV ─────────────────────────────────────────────────── */
+#site-header { position: sticky; top: 0; z-index: 100; }
+
+.nav-mini {
+  background: var(--green);
+  color: rgba(248,249,250,.9);
+  font-size: .72rem;
+  display: none;
+}
+@media(min-width:768px){ .nav-mini { display: block; } }
+.nav-mini__inner {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 2.5rem; gap:1rem;
+}
+.nav-mini__left  { display:flex; align-items:center; gap:1.5rem; }
+.nav-mini__right { display:flex; align-items:center; gap:1rem; }
+.nav-mini a, .nav-mini-link {
+  display: inline-flex; align-items: center; gap:.45rem;
+  color: inherit; transition: color .2s;
+}
+.nav-mini a:hover, .nav-mini-link:hover { color: var(--gold); }
+.nav-mini svg { width:.9rem; height:.9rem; color: var(--gold); flex-shrink:0; }
+.nav-mini__hours { color: rgba(248,249,250,.55); }
+.lang-switcher { display:flex; align-items:center; gap:.3rem; }
+.lang-btn {
+  padding:.15rem .4rem; border-radius:4px; font-size:.65rem; font-weight:700;
+  letter-spacing:.08em; text-transform:uppercase; color:rgba(248,249,250,.65);
+  cursor: pointer; border:none; background:none; transition: color .2s;
+}
+.lang-btn.active { color: var(--gold); }
+.lang-sep { color: rgba(248,249,250,.25); font-size:.6rem; }
+
+.nav-main {
+  background: rgba(248,249,250,.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(13,68,40,.06);
+  box-shadow: var(--shadow-nav);
+}
+.nav-main__inner {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 4.5rem; gap: 1rem;
+}
+
+/* Logo */
+.logo { display:flex; align-items:center; gap:.75rem; text-decoration:none; flex-shrink:0; }
+.logo__crest { width:2.75rem; height:2.75rem; flex-shrink:0; }
+.logo__text { display:flex; flex-direction:column; line-height:1; }
+.logo__name {
+  font-family: var(--font-serif); font-size:1.1rem; font-weight:700;
+  color: var(--green); letter-spacing:-.02em;
+}
+.logo__name span { color: var(--gold); }
+.logo__sub {
+  margin-top:.25rem; font-size:.6rem; font-weight:700; letter-spacing:.18em;
+  text-transform:uppercase; color: var(--gold-xdark);
+}
+.logo--light .logo__name { color: var(--off-white); }
+.logo--light .logo__sub  { color: rgba(225,194,84,.8); }
+
+/* Desktop nav links */
+.nav-links { display:none; align-items:center; gap:.25rem; }
+@media(min-width:1024px){ .nav-links { display:flex; } }
+.nav-link {
+  position:relative; padding:.5rem 1rem; border-radius:100px;
+  font-size:.875rem; font-weight:500; color: var(--slate);
+  transition: color .2s;
+}
+.nav-link:hover, .nav-link.active { color: var(--green); }
+.nav-link::after {
+  content:''; position:absolute; bottom:-1px; left:1rem; right:1rem;
+  height:2px; border-radius:1px; background: var(--grad-gold);
+  transform: scaleX(0); transition: transform .3s;
+}
+.nav-link.active::after { transform: scaleX(1); }
+
+.nav-main__actions { display:flex; align-items:center; gap:.75rem; }
+.nav-cta { display:none; }
+@media(min-width:640px){ .nav-cta { display:inline-flex; } }
+
+/* Hamburger */
+.hamburger {
+  display:flex; align-items:center; justify-content:center;
+  width:2.75rem; height:2.75rem; border-radius:100px;
+  border: 1.5px solid rgba(13,68,40,.15); color: var(--green);
+  transition: background .2s, color .2s;
+}
+.hamburger:hover { background: var(--green); color: var(--off-white); }
+.hamburger svg { width:1.25rem; height:1.25rem; }
+@media(min-width:1024px){ .hamburger { display:none; } }
+
+/* Mobile menu */
+.mobile-menu {
+  background: var(--off-white); border-top: 1px solid rgba(13,68,40,.06);
+  display: none; overflow: hidden;
+}
+.mobile-menu.open { display: block; }
+.mobile-menu__inner { padding:1rem 0 1.25rem; display:flex; flex-direction:column; gap:.25rem; }
+.mobile-menu__link {
+  display:block; padding:.75rem 1rem; border-radius:var(--radius-md);
+  font-size:1rem; font-weight:500; color: var(--slate); transition: background .2s, color .2s;
+}
+.mobile-menu__link:hover, .mobile-menu__link.active {
+  background: var(--green); color: var(--off-white);
+}
+.mobile-menu__footer {
+  margin-top:.5rem; display:flex; align-items:center; justify-content:space-between;
+  background: rgba(13,68,40,.05); border-radius:var(--radius-md); padding:.75rem 1rem;
+  font-size:.875rem;
+}
+.mobile-menu__footer a { color: var(--green); font-weight:700; }
+
+/* ── HERO ────────────────────────────────────────────────── */
+.hero {
+  position:relative; overflow:hidden;
+  background: var(--grad-hero); color: var(--off-white);
+}
+.hero__grid-bg {
+  position:absolute; inset:0; opacity:.06; pointer-events:none;
+}
+.hero__glow-1 {
+  position:absolute; top:-8rem; right:-8rem;
+  width:24rem; height:24rem; border-radius:50%;
+  background:rgba(212,175,55,.2); filter:blur(60px); pointer-events:none;
+}
+.hero__glow-2 {
+  position:absolute; bottom:-10rem; left:-6rem;
+  width:24rem; height:24rem; border-radius:50%;
+  background:rgba(46,96,64,.35); filter:blur(60px); pointer-events:none;
+}
+.hero__inner {
+  position:relative; padding: clamp(5rem,8vw,7rem) 0;
+  display:grid; gap:3.5rem; align-items:center;
+}
+@media(min-width:1024px){ .hero__inner { grid-template-columns: 1.15fr 0.85fr; } }
+.hero__eyebrow { color:rgba(225,194,84,.9); }
+.hero__h1 {
+  margin-top:1.5rem;
+  font-family:var(--font-serif); font-size:clamp(2rem,5vw,3.5rem);
+  font-weight:700; line-height:1.07; color:var(--off-white);
+}
+.hero__sub {
+  margin-top:1.5rem; max-width:38rem;
+  font-size:1.1rem; line-height:1.7; color:rgba(248,249,250,.75);
+}
+.hero__ctas { margin-top:2.25rem; display:flex; flex-wrap:wrap; gap:1rem; align-items:center; }
+@media(max-width:479px){
+  .hero__ctas { flex-direction: column; align-items: stretch; }
+  .hero__ctas .btn { width: 100%; justify-content: center; }
+  .btn--lg { padding: .85rem 1.5rem; font-size: .95rem; }
+}
+
+/* Slider strip */
+.hero__slider { margin-top:3rem; display:flex; align-items:center; gap:1rem; }
+.hero__slides { position:relative; height:4rem; flex:1; overflow:hidden; }
+.hero__slide {
+  position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center;
+  transition: opacity .7s, transform .7s;
+}
+.hero__slide:not(.active) { opacity:0; transform:translateY(1rem); pointer-events:none; }
+.hero__slide.active { opacity:1; transform:none; }
+.hero__slide-kicker {
+  font-size:.65rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
+  color:rgba(225,194,84,.85);
+}
+.hero__slide-text { margin-top:.25rem; font-size:.85rem; color:rgba(248,249,250,.8); }
+.hero__dots { display:flex; flex-direction:column; gap:.5rem; }
+.hero__dot {
+  height:.5rem; border-radius:1rem; transition: width .4s, background .4s;
+  width:.5rem; background:rgba(248,249,250,.25); border:none; cursor:pointer;
+}
+.hero__dot.active { width:1.5rem; background:var(--gold); }
+
+/* Stats card */
+.hero__card {
+  position:relative;
+  background:rgba(248,249,250,.05); border:1px solid rgba(248,249,250,.1);
+  border-radius:var(--radius-xl); padding:clamp(1.25rem,4vw,2rem); backdrop-filter:blur(8px);
+  box-shadow:var(--shadow-hover);
+}
+.hero__card::before {
+  content:''; position:absolute; top:0; left:2rem; right:2rem; height:1px;
+  background: var(--grad-gold);
+}
+.hero__card-label {
+  font-size:.65rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
+  color:rgba(225,194,84,.8);
+}
+.hero__card-title {
+  margin-top:.5rem; font-family:var(--font-serif); font-size:1.35rem; color:var(--off-white);
+}
+.stats-grid {
+  margin-top:2rem; display:grid; grid-template-columns:1fr 1fr;
+  gap:1px; background:rgba(248,249,250,.1); border-radius:var(--radius-md); overflow:hidden;
+}
+.stat-cell { background:rgba(3,22,13,.4); padding:1.25rem; }
+.stat-val { font-family:var(--font-serif); font-size:1.85rem; font-weight:700; color:var(--gold); }
+.stat-label { margin-top:.25rem; font-size:.7rem; line-height:1.4; color:rgba(248,249,250,.6); }
+.hero__badge {
+  margin-top:1.5rem; display:flex; align-items:center; gap:.75rem;
+  background:rgba(212,175,55,.1); border-radius:var(--radius-md); padding:1rem;
+}
+.hero__badge svg { width:1.25rem; height:1.25rem; color:var(--gold); flex-shrink:0; }
+.hero__badge-text { font-size:.8rem; color:rgba(248,249,250,.8); }
+
+/* ── PAGE HEADER (inner pages) ───────────────────────────── */
+.page-header {
+  position:relative; overflow:hidden;
+  background: var(--grad-hero); color:var(--off-white); padding:4rem 0 4.5rem;
+}
+.page-header__glow {
+  position:absolute; top:-6rem; right:-6rem;
+  width:18rem; height:18rem; border-radius:50%;
+  background:rgba(212,175,55,.15); filter:blur(50px); pointer-events:none;
+}
+.page-header__grid {
+  position:absolute; inset:0; opacity:.06; pointer-events:none;
+}
+.breadcrumb { font-size:.75rem; color:rgba(248,249,250,.55); margin-bottom:1.5rem; }
+.breadcrumb a { transition:color .2s; }
+.breadcrumb a:hover { color:var(--gold); }
+.breadcrumb__sep { margin:0 .5rem; color:rgba(248,249,250,.25); }
+.breadcrumb__current { color:rgba(225,194,84,.8); }
+.page-header__h1 {
+  font-family:var(--font-serif); font-size:clamp(1.85rem,4vw,3rem);
+  font-weight:700; line-height:1.1; color:var(--off-white); max-width:40rem; margin-top:1rem;
+}
+.page-header__sub {
+  margin-top:1.25rem; max-width:36rem;
+  font-size:1rem; line-height:1.7; color:rgba(248,249,250,.75);
+}
+
+/* ── FEATURE GRID (Pillars) ──────────────────────────────── */
+.pillar-card {
+  position:relative; overflow:hidden;
+  background:var(--white); border:1px solid rgba(13,68,40,.08);
+  border-radius:var(--radius-xl); padding:clamp(1.25rem,4vw,2rem);
+  box-shadow:var(--shadow-card); transition: transform .3s, box-shadow .3s;
+}
+.pillar-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-hover); }
+.pillar-card::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:3px;
+  background:var(--grad-gold); transform:scaleX(0); transform-origin:left;
+  transition:transform .3s;
+}
+.pillar-card:hover::before { transform:scaleX(1); }
+.pillar-icon {
+  display:inline-flex; align-items:center; justify-content:center;
+  width:3.5rem; height:3.5rem; border-radius:var(--radius-md);
+  background:rgba(13,68,40,.08); color:var(--green);
+  transition: background .3s, color .3s;
+}
+.pillar-card:hover .pillar-icon { background:var(--green); color:var(--gold); }
+.pillar-icon svg { width:1.75rem; height:1.75rem; }
+.pillar-h3 { margin-top:1.5rem; font-size:1.2rem; font-weight:600; }
+.pillar-p  { margin-top:.75rem; font-size:.875rem; line-height:1.7; color:rgba(51,65,85,.8); }
+.pillar-num {
+  display:block; margin-top:1.5rem;
+  font-family:var(--font-serif); font-size:3rem; font-weight:700;
+  color:rgba(13,68,40,.05);
+}
+
+/* ── ACADEMICS ───────────────────────────────────────────── */
+.academics-layout {
+  display:grid; gap:3.5rem; align-items:start;
+}
+@media(min-width:1024px){ .academics-layout { grid-template-columns: 0.9fr 1.1fr; } }
+.info-row {
+  display:flex; align-items:start; gap:.5rem; flex-direction: column;
+  background:var(--off-white); border-radius:var(--radius-md); padding:1.25rem;
+}
+.info-row + .info-row { margin-top:1rem; }
+.info-row dt { font-size:.875rem; font-weight:700; color:var(--green); }
+@media(min-width:480px){
+  .info-row { flex-direction: row; gap: 1rem; }
+  .info-row dt { width:9rem; flex-shrink:0; }
+}
+.info-row dd { font-size:.875rem; color:rgba(51,65,85,.8); }
+.acad-card {
+  position:relative; overflow:hidden;
+  background:var(--off-white); border:1px solid rgba(13,68,40,.08);
+  border-radius:var(--radius-xl); padding:1.75rem;
+  transition:transform .3s, box-shadow .3s;
+}
+.acad-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-hover); }
+.acad-card::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:3px;
+  background:var(--grad-gold); transform:scaleX(0); transform-origin:left;
+  transition:transform .3s;
+}
+.acad-card:hover::before { transform:scaleX(1); }
+.acad-num { font-family:var(--font-serif); font-size:.875rem; font-weight:700; color:var(--gold-dark); }
+.acad-h3  { margin-top:.75rem; font-size:1.05rem; font-weight:600; }
+.acad-p   { margin-top:.5rem; font-size:.8rem; line-height:1.65; color:rgba(51,65,85,.8); }
+
+/* ── CLUBS ───────────────────────────────────────────────── */
+.clubs-header {
+  display:flex; flex-direction:column; gap:1.5rem; margin-bottom:3rem;
+}
+@media(min-width:768px){ .clubs-header { flex-direction:row; align-items:flex-end; justify-content:space-between; } }
+.club-card {
+  display:flex; align-items:center; gap:1rem;
+  background:var(--white); border:1px solid rgba(13,68,40,.08);
+  border-radius:var(--radius-md); padding:1.25rem;
+  box-shadow:var(--shadow-card); transition:transform .3s, box-shadow .3s, border-color .3s;
+}
+.club-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-hover); border-color:rgba(212,175,55,.4); }
+.club-icon {
+  display:flex; align-items:center; justify-content:center;
+  width:3rem; height:3rem; border-radius:var(--radius-sm); flex-shrink:0;
+  background:rgba(13,68,40,.08); color:var(--green);
+  transition:background .3s, color .3s;
+}
+.club-card:hover .club-icon { background:var(--green); color:var(--gold); }
+.club-icon svg { width:1.4rem; height:1.4rem; }
+.club-name { font-size:.9rem; font-weight:700; color:var(--green); }
+.club-cat  { font-size:.65rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--gold-xdark); margin-top:.2rem; }
+
+/* ── PIPELINE ────────────────────────────────────────────── */
+.pipeline-steps {
+  position:relative; display:grid; gap:2.5rem; margin-top:3rem;
+}
+@media(min-width:768px){
+  .pipeline-steps { grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+  .pipeline-steps::before {
+    content:''; position:absolute; top:1.7rem; left:0; right:0; height:1px;
+    background:linear-gradient(to right, transparent, rgba(212,175,55,.4), transparent);
+  }
+}
+.pipeline-step { position:relative; display:flex; flex-direction:column; align-items:center; text-align:center; }
+@media(min-width:768px){ .pipeline-step { align-items:flex-start; text-align:left; } }
+.pipeline-step__num {
+  position:relative; z-index:1;
+  display:flex; align-items:center; justify-content:center;
+  width:3.5rem; height:3.5rem; border-radius:var(--radius-md);
+  background:var(--grad-gold); font-family:var(--font-serif); font-size:1.2rem; font-weight:700;
+  color:var(--green); box-shadow:var(--shadow-hover);
+}
+.pipeline-step__h3 { margin-top:1.5rem; font-size:1.15rem; font-weight:600; color:var(--off-white); }
+.pipeline-step__p  { margin-top:.75rem; max-width:18rem; font-size:.85rem; line-height:1.7; color:rgba(248,249,250,.7); }
+
+/* ── PRICING ─────────────────────────────────────────────── */
+.pricing-grid { display:grid; gap:1.5rem; max-width:52rem; margin:3.5rem auto 0; }
+@media(min-width:768px){ .pricing-grid { grid-template-columns:1fr 1fr; } }
+.price-card {
+  position:relative; display:flex; flex-direction:column;
+  border-radius:var(--radius-xl); padding:clamp(1.25rem,4vw,2rem); overflow:hidden;
+  transition:transform .3s;
+}
+.price-card:hover { transform:translateY(-4px); }
+.price-card--base { background:var(--white); border:1px solid rgba(13,68,40,.1); box-shadow:var(--shadow-card); }
+.price-card--highlight { background:var(--green); border:1px solid rgba(13,68,40,.1); box-shadow:var(--shadow-hover); }
+.price-card__badge {
+  position:absolute; top:1.5rem; right:1.5rem;
+  background:var(--grad-gold); color:var(--green);
+  font-size:.6rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+  padding:.25rem .75rem; border-radius:100px;
+}
+.price-card__sub {
+  font-size:.65rem; font-weight:700; letter-spacing:.15em; text-transform:uppercase;
+}
+.price-card--base   .price-card__sub { color:var(--gold-xdark); }
+.price-card--highlight .price-card__sub { color:rgba(225,194,84,.8); }
+.price-card__title { margin-top:.75rem; font-size:1.35rem; font-weight:700; }
+.price-card--base   .price-card__title { color:var(--green); }
+.price-card--highlight .price-card__title { color:var(--off-white); }
+.price-card__amount {
+  margin-top:1.5rem; display:flex; align-items:flex-end; gap:.4rem;
+}
+.price-val {
+  font-family:var(--font-serif); font-size:3rem; font-weight:700; line-height:1;
+}
+.price-card--base      .price-val { color:var(--green); }
+.price-card--highlight .price-val { color:var(--gold); }
+.price-unit { padding-bottom:.5rem; font-size:1.2rem; }
+.price-period { padding-bottom:.6rem; font-size:.8rem; color:rgba(51,65,85,.55); }
+.price-card--highlight .price-unit,
+.price-card--highlight .price-period { color:rgba(248,249,250,.6); }
+.price-list { margin-top:1.75rem; flex:1; display:flex; flex-direction:column; gap:.85rem; }
+.price-list li { display:flex; align-items:start; gap:.75rem; font-size:.85rem; }
+.price-list svg { width:1rem; height:1rem; flex-shrink:0; margin-top:.1rem; }
+.price-card--base      .price-list svg { color:var(--green); }
+.price-card--highlight .price-list svg { color:var(--gold); }
+.price-card--base      .price-list span { color:rgba(51,65,85,.8); }
+.price-card--highlight .price-list span { color:rgba(248,249,250,.8); }
+.price-card__cta { margin-top:2rem; }
+
+/* ── APPLICATION FORM ────────────────────────────────────── */
+.apply-layout { display:grid; gap:3rem; align-items:start; }
+@media(min-width:1024px){ .apply-layout { grid-template-columns: 0.9fr 1.1fr; } }
+.form-card {
+  background:var(--off-white); border:1px solid rgba(13,68,40,.08);
+  border-radius:var(--radius-xl); padding:clamp(1.25rem,5vw,2.5rem); box-shadow:var(--shadow-card);
+}
+.form-field { margin-bottom:1.5rem; }
+.form-label {
+  display:block; margin-bottom:.5rem;
+  font-size:.875rem; font-weight:700; color:var(--green);
+}
+.form-label span { color:var(--gold-dark); }
+.form-input, .form-select, .form-textarea {
+  width:100%; padding:.75rem 1rem; border-radius:var(--radius-md);
+  border:1.5px solid rgba(13,68,40,.15); background:var(--white);
+  font:inherit; font-size:.875rem; color:var(--slate);
+  transition:border-color .2s, box-shadow .2s; outline:none;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color:var(--green); box-shadow:0 0 0 3px rgba(212,175,55,.25);
+}
+.form-input::placeholder, .form-textarea::placeholder { color:rgba(51,65,85,.35); }
+.form-select { appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230D4428' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right .75rem center; background-size:1.1rem; padding-right:2.5rem; cursor:pointer; }
+.form-textarea { resize:none; }
+.form-note { text-align:center; font-size:.7rem; color:rgba(51,65,85,.5); margin-top:.75rem; }
+.form-success {
+  display:none; margin-top:1rem; padding:1rem;
+  background:rgba(13,68,40,.06); border:1.5px solid rgba(13,68,40,.2);
+  border-radius:var(--radius-md); text-align:center;
+  font-size:.875rem; font-weight:700; color:var(--green);
+}
+.form-success.show { display:block; }
+.contact-info-card {
+  background:var(--white); border:1px solid rgba(13,68,40,.08);
+  border-radius:var(--radius-xl); padding:2rem; box-shadow:var(--shadow-card);
+}
+.cinfo-address {
+  display:flex; align-items:start; gap:1rem;
+  padding-bottom:1.5rem; border-bottom:1px solid rgba(13,68,40,.08);
+}
+.cinfo-icon {
+  display:flex; align-items:center; justify-content:center;
+  width:3rem; height:3rem; border-radius:var(--radius-md); flex-shrink:0;
+  background:rgba(13,68,40,.08); color:var(--green);
+}
+.cinfo-icon svg { width:1.4rem; height:1.4rem; }
+.cinfo-label { font-size:.65rem; font-weight:700; letter-spacing:.15em; text-transform:uppercase; color:var(--gold-xdark); }
+.cinfo-val { margin-top:.35rem; font-size:.875rem; color:var(--slate); line-height:1.5; }
+.cinfo-grid { margin-top:1.5rem; display:grid; gap:1.25rem; }
+@media(min-width:640px){ .cinfo-grid { grid-template-columns:repeat(3,1fr); } }
+.cinfo-item .cinfo-icon { width:2.5rem; height:2.5rem; margin-bottom:.75rem; }
+.cinfo-item .cinfo-icon svg { width:1.2rem; height:1.2rem; }
+.cinfo-item a { display:block; margin-top:.25rem; font-size:.875rem; font-weight:700; color:var(--green); transition:color .2s; }
+.cinfo-item a:hover { color:var(--gold-xdark); }
+.socials-strip {
+  margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid rgba(13,68,40,.08);
+  display:flex; flex-wrap:wrap; gap:.5rem;
+}
+.social-btn {
+  padding:.4rem 1rem; border-radius:100px; font-size:.75rem; font-weight:700;
+  border:1.5px solid rgba(13,68,40,.15); color:var(--green); transition:border-color .2s, color .2s;
+}
+.social-btn:hover { border-color:var(--gold); color:var(--gold-xdark); }
+
+/* ── ABOUT — specialists ─────────────────────────────────── */
+.specialist-card {
+  background:rgba(248,249,250,.06); border:1px solid rgba(248,249,250,.1);
+  border-radius:var(--radius-xl); padding:1.75rem; backdrop-filter:blur(6px);
+}
+.spec-icon {
+  display:flex; align-items:center; justify-content:center;
+  width:3rem; height:3rem; border-radius:var(--radius-md);
+  background:rgba(212,175,55,.15); color:var(--gold);
+}
+.spec-icon svg { width:1.4rem; height:1.4rem; }
+.spec-h3 { margin-top:1.25rem; font-size:1.1rem; font-weight:600; color:var(--off-white); }
+.spec-p  { margin-top:.5rem; font-size:.8rem; line-height:1.65; color:rgba(248,249,250,.7); }
+
+/* ── CTA BAND ────────────────────────────────────────────── */
+.cta-band {
+  position:relative; overflow:hidden;
+  background:var(--green-xdark); border-radius:var(--radius-xl);
+  padding:3rem 2rem; text-align:center;
+}
+.cta-band::before {
+  content:''; position:absolute; top:-8rem; left:-8rem;
+  width:20rem; height:20rem; border-radius:50%;
+  background:rgba(212,175,55,.1); filter:blur(50px); pointer-events:none;
+}
+.cta-band h2 { font-family:var(--font-serif); font-size:clamp(1.4rem,3vw,2rem); color:var(--off-white); }
+.cta-band p  { margin-top:1rem; color:rgba(248,249,250,.7); max-width:32rem; margin-left:auto; margin-right:auto; }
+.cta-band__btns { margin-top:2rem; display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; }
+@media(max-width:479px){
+  .cta-band__btns { flex-direction: column; align-items: stretch; }
+  .cta-band__btns .btn { width: 100%; justify-content: center; }
+}
+
+/* ── FOOTER ──────────────────────────────────────────────── */
+#site-footer { background:var(--green-xdark); color:rgba(248,249,250,.8); margin-top:auto; }
+.footer-accent { height:4px; background:var(--grad-gold); }
+.footer-grid {
+  display:grid; gap:3rem; padding:4rem 0;
+}
+@media(min-width:640px) { .footer-grid { grid-template-columns:repeat(2,1fr); } }
+@media(min-width:1024px){ .footer-grid { grid-template-columns:1.4fr 1fr 1fr 1.2fr; } }
+.footer-brand p { margin-top:1.25rem; max-width:18rem; font-size:.85rem; line-height:1.7; color:rgba(248,249,250,.6); }
+.footer-socials { margin-top:1.5rem; display:flex; flex-wrap:wrap; gap:.5rem; }
+.footer-social {
+  padding:.4rem 1rem; border-radius:100px; font-size:.7rem; font-weight:700;
+  border:1px solid rgba(248,249,250,.15); color:rgba(248,249,250,.7);
+  transition: border-color .2s, color .2s;
+}
+.footer-social:hover { border-color:var(--gold); color:var(--gold); }
+.footer-col-title {
+  font-size:.7rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:1.25rem;
+}
+.footer-nav-links { display:flex; flex-direction:column; gap:.85rem; }
+.footer-nav-link {
+  display:inline-flex; align-items:center; gap:.5rem;
+  font-size:.875rem; color:rgba(248,249,250,.7); transition:color .2s; cursor:pointer;
+}
+.footer-nav-link::before { content:''; display:block; width:.3rem; height:.3rem; border-radius:50%; background:rgba(212,175,55,.6); flex-shrink:0; }
+.footer-nav-link:hover { color:var(--gold); }
+.footer-club-list { display:flex; flex-direction:column; gap:.75rem; }
+.footer-club { font-size:.875rem; color:rgba(248,249,250,.7); }
+.footer-contact-list { display:flex; flex-direction:column; gap:1rem; }
+.footer-contact-item { display:flex; align-items:start; gap:.75rem; }
+.footer-contact-item svg { width:1rem; height:1rem; flex-shrink:0; margin-top:.15rem; color:var(--gold); }
+.footer-contact-item a  { color:rgba(248,249,250,.7); transition:color .2s; }
+.footer-contact-item a:hover { color:var(--gold); }
+.footer-contact-item span { font-size:.85rem; color:rgba(248,249,250,.7); line-height:1.5; }
+.footer-bottom {
+  border-top:1px solid rgba(248,249,250,.1);
+  display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;
+  gap:.75rem; padding:1.5rem 0; font-size:.75rem; color:rgba(248,249,250,.45);
+}
+
+/* ── MAP ─────────────────────────────────────────────────── */
+.map-card {
+  background:var(--white); border:1px solid rgba(13,68,40,.08);
+  border-radius:var(--radius-xl); overflow:hidden; box-shadow:var(--shadow-card);
+}
+.map-card__header {
+  padding:1rem 1.5rem; border-bottom:1px solid rgba(13,68,40,.08);
+}
+.map-card__header p:first-child { font-size:.9rem; font-weight:700; color:var(--green); }
+.map-card__header p:last-child  { font-size:.75rem; color:var(--slate-muted); margin-top:.2rem; }
+.map-card iframe { display:block; width:100%; max-width:100%; height:28rem; border:none; }
+
+/* ── SECTION HEADERS ─────────────────────────────────────── */
+.sec-header { margin-bottom:3.5rem; }
+.sec-header--center { text-align:center; }
+.sec-header h2 { font-size:clamp(1.6rem,3.5vw,2.4rem); margin-top:1.25rem; }
+.sec-header p  { margin-top:1rem; font-size:1rem; line-height:1.75; color:rgba(51,65,85,.8); max-width:38rem; }
+.sec-header--center p { margin-left:auto; margin-right:auto; }
+.sec-header--light h2 { color:var(--off-white); }
+.sec-header--light p  { color:rgba(248,249,250,.7); }
+
+/* ── PAGES (routing) ─────────────────────────────────────── */
+.page { display:none; }
+.page.active { display:block; }
+
+/* ── ANIMATIONS ──────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(1.5rem); }
+  to   { opacity:1; transform:none; }
+}
+.fade-up { animation: fadeUp .7s cubic-bezier(.22,1,.36,1) both; }
+.delay-1 { animation-delay:.1s; }
+.delay-2 { animation-delay:.2s; }
+.delay-3 { animation-delay:.3s; }
+
+/* ── RESPONSIVE HELPERS ──────────────────────────────────── */
+@media(min-width:640px)  { .hide-mobile { display:flex; } }
+@media(max-width:639px)  { .hide-mobile { display:none!important; } }
+@media(min-width:768px)  { .hide-sm { display:none!important; } }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════ HEADER / NAV ══════════════════ -->
+<header id="site-header">
+  <!-- mini bar -->
+  <div class="nav-mini">
+    <div class="wrap nav-mini__inner">
+      <div class="nav-mini__left">
+        <a href="tel:+77004007788">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          <strong>+7 700 400-77-88</strong>
+        </a>
+        <span style="color:rgba(248,249,250,.55);display:inline-flex;align-items:center;gap:.45rem;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          ж/м Коктал, пер. Мойнақ, 14
+        </span>
+      </div>
+      <div class="nav-mini__right">
+        <span class="nav-mini__hours">Пн–Пт, 08:00–18:00</span>
+        <div class="lang-switcher">
+          <button class="lang-btn" type="button">KZ</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-btn active" type="button">RU</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-btn" type="button">EN</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- main bar -->
+  <div class="nav-main">
+    <div class="wrap nav-main__inner">
+      <!-- LOGO -->
+      <a class="logo" onclick="navigate('home');return false;" href="#home" aria-label="Koktal Garden School — на главную">
+        <svg class="logo__crest" viewBox="0 0 48 48" aria-hidden="true">
+          <path d="M24 2 L43 9 V24 C43 36 34 43 24 46 C14 43 5 36 5 24 V9 Z" fill="none" stroke="#0D4428" stroke-width="2"/>
+          <path d="M24 6 L39 11.5 V24 C39 33.5 31.5 39.5 24 42 C16.5 39.5 9 33.5 9 24 V11.5 Z" fill="#0D4428" opacity=".07"/>
+          <path d="M24 12 C30 17 31 25 24 34 C17 25 18 17 24 12 Z" fill="#D4AF37"/>
+          <path d="M24 14 V32" stroke="#0D4428" stroke-width="1.4" opacity=".55"/>
+        </svg>
+        <span class="logo__text">
+          <span class="logo__name">Koktal&nbsp;<span>Garden</span></span>
+          <span class="logo__sub">School · Astana</span>
+        </span>
+      </a>
+      <!-- Desktop nav -->
+      <nav class="nav-links" aria-label="Основная навигация">
+        <a class="nav-link active" onclick="navigate('home');return false;" href="#home">Главная</a>
+        <a class="nav-link" onclick="navigate('about');return false;" href="#about">О школе</a>
+        <a class="nav-link" onclick="navigate('admissions');return false;" href="#admissions">Поступающим</a>
+        <a class="nav-link" onclick="navigate('contact');return false;" href="#contact">Контакты</a>
+      </nav>
+      <div class="nav-main__actions">
+        <a class="btn btn--gold nav-cta" onclick="navigate('admissions');return false;" href="#admissions">Онлайн-регистрация</a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Открыть меню" aria-expanded="false" type="button">
+          <svg id="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          <svg id="icon-close" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="wrap mobile-menu__inner">
+        <a class="mobile-menu__link active" onclick="navigate('home');closeMobileMenu();return false;" href="#home">Главная</a>
+        <a class="mobile-menu__link" onclick="navigate('about');closeMobileMenu();return false;" href="#about">О школе</a>
+        <a class="mobile-menu__link" onclick="navigate('admissions');closeMobileMenu();return false;" href="#admissions">Поступающим</a>
+        <a class="mobile-menu__link" onclick="navigate('contact');closeMobileMenu();return false;" href="#contact">Контакты</a>
+        <a class="btn btn--gold" style="margin-top:.5rem;width:100%;" onclick="navigate('admissions');closeMobileMenu();return false;" href="#admissions">Онлайн-регистрация</a>
+        <div class="mobile-menu__footer">
+          <a href="tel:+77004007788">+7 700 400-77-88</a>
+          <div class="lang-switcher">
+            <button class="lang-btn" type="button">KZ</button>
+            <span class="lang-sep">|</span>
+            <button class="lang-btn active" type="button">RU</button>
+            <span class="lang-sep">|</span>
+            <button class="lang-btn" type="button">EN</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ══════════════════ PAGE: HOME ══════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__grid-bg" aria-hidden="true">
+      <svg width="100%" height="100%"><defs><pattern id="g" width="56" height="56" patternUnits="userSpaceOnUse"><path d="M56 0H0V56" fill="none" stroke="#F8F9FA" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(#g)"/></svg>
+    </div>
+    <div class="hero__glow-1" aria-hidden="true"></div>
+    <div class="hero__glow-2" aria-hidden="true"></div>
+    <div class="wrap hero__inner">
+      <!-- Left -->
+      <div class="fade-up">
+        <span class="eyebrow hero__eyebrow eyebrow--light">Астана · KZ · RU · EN</span>
+        <h1 class="hero__h1">Качественное начальное образование в Астане</h1>
+        <p class="hero__sub">Трёхъязычное образование (KZ · RU · EN) и классы до 12 учеников. Полный день, питание и развивающие кружки — всё для уверенного старта вашего ребёнка.</p>
+        <div class="hero__ctas">
+          <a class="btn btn--gold btn--lg" onclick="navigate('admissions');return false;" href="#admissions">
+            Онлайн-регистрация
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--outline btn--lg" onclick="navigate('about');return false;" href="#about">О школе</a>
+        </div>
+        <!-- Slider -->
+        <div class="hero__slider">
+          <div class="hero__slides" id="hero-slides">
+            <div class="hero__slide active" data-slide="0">
+              <span class="hero__slide-kicker">Начальная школа · 0–4 класс</span>
+              <span class="hero__slide-text">Малые классы до 12 учеников и внимание к каждому ребёнку.</span>
+            </div>
+            <div class="hero__slide" data-slide="1">
+              <span class="hero__slide-kicker">Трёхъязычное обучение</span>
+              <span class="hero__slide-text">Казахский, русский и английский с первого дня в школе.</span>
+            </div>
+            <div class="hero__slide" data-slide="2">
+              <span class="hero__slide-kicker">Полный день 08:00 – 18:00</span>
+              <span class="hero__slide-text">4-разовое питание, кружки и забота специалистов.</span>
+            </div>
+          </div>
+          <div class="hero__dots" role="tablist">
+            <button class="hero__dot active" data-dot="0" type="button" aria-label="Слайд 1"></button>
+            <button class="hero__dot" data-dot="1" type="button" aria-label="Слайд 2"></button>
+            <button class="hero__dot" data-dot="2" type="button" aria-label="Слайд 3"></button>
+          </div>
+        </div>
+      </div>
+      <!-- Stats card -->
+      <div class="fade-up delay-2">
+        <div class="hero__card">
+          <p class="hero__card-label">Koktal Garden School</p>
+          <p class="hero__card-title">Школа полного дня в сердце Астаны</p>
+          <div class="stats-grid">
+            <div class="stat-cell"><div class="stat-val">12</div><div class="stat-label">учеников в классе максимум</div></div>
+            <div class="stat-cell"><div class="stat-val">3</div><div class="stat-label">языка обучения</div></div>
+            <div class="stat-cell"><div class="stat-val">10ч</div><div class="stat-label">полный день 08:00–18:00</div></div>
+            <div class="stat-cell"><div class="stat-val">12</div><div class="stat-label">кружков и секций</div></div>
+          </div>
+          <div class="hero__badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+            <span class="hero__badge-text">Соответствие ГОСО РК · Pearson Math · QALAN</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILLARS -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-header sec-header--center">
+        <span class="eyebrow eyebrow--center">Наш подход</span>
+        <h2>Три опоры образования в KGS</h2>
+        <p>Мы соединяем высокие академические стандарты, воспитание ценностей и заботу полного дня, чтобы каждый ребёнок раскрыл свой потенциал.</p>
+      </div>
+      <div class="grid-3">
+        <article class="pillar-card fade-up">
+          <span class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v6c0 5 3.8 8.5 9 9 5.2-.5 9-4 9-9V7l-9-5Z"/><path d="m9 12 2 2 4-4"/></svg>
+          </span>
+          <h3 class="pillar-h3">Высокие стандарты</h3>
+          <p class="pillar-p">Государственный стандарт РК в сочетании с международными программами Pearson Math и системой Л.Г. Петерсон.</p>
+          <span class="pillar-num">01</span>
+        </article>
+        <article class="pillar-card fade-up delay-1">
+          <span class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          </span>
+          <h3 class="pillar-h3">Обучение через ценности</h3>
+          <p class="pillar-p">Гуманитарный (liberal arts) подход, воспитание характера, уважения и любознательности с первого класса.</p>
+          <span class="pillar-num">02</span>
+        </article>
+        <article class="pillar-card fade-up delay-2">
+          <span class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6"/></svg>
+          </span>
+          <h3 class="pillar-h3">Полный день и забота</h3>
+          <p class="pillar-p">Режим 08:00 – 18:00, 4-разовое питание, кружки и присмотр специалистов — спокойствие для всей семьи.</p>
+          <span class="pillar-num">03</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACADEMICS -->
+  <section class="sec sec--white">
+    <div class="wrap">
+      <div class="academics-layout">
+        <div>
+          <span class="eyebrow">Академическая программа</span>
+          <h2 style="margin-top:1.25rem;font-size:clamp(1.5rem,3vw,2.2rem);">Сильная база с международными методиками</h2>
+          <p style="margin-top:1.25rem;font-size:1rem;line-height:1.75;color:rgba(51,65,85,.8);">Обучение строится на Государственном стандарте Республики Казахстан и усилено международными программами по математике и современной цифровой платформой.</p>
+          <dl>
+            <div class="info-row"><dt>Трёхъязычность</dt><dd>KZ · RU · EN — три языка как естественная среда с подготовительного класса.</dd></div>
+            <div class="info-row"><dt>Малые классы</dt><dd>До 12 учеников в классе — педагог уделяет внимание каждому ребёнку.</dd></div>
+            <div class="info-row"><dt>Режим дня</dt><dd>08:00 – 18:00 — полноценный учебный день с питанием, кружками и отдыхом.</dd></div>
+          </dl>
+        </div>
+        <div class="grid-2">
+          <article class="acad-card"><span class="acad-num">01</span><h3 class="acad-h3">ГОСО РК</h3><p class="acad-p">Обучение полностью соответствует Государственному общеобязательному стандарту образования РК.</p></article>
+          <article class="acad-card"><span class="acad-num">02</span><h3 class="acad-h3">Pearson Math</h3><p class="acad-p">Международная программа по математике для развития логического и аналитического мышления.</p></article>
+          <article class="acad-card"><span class="acad-num">03</span><h3 class="acad-h3">Система Л.Г. Петерсон</h3><p class="acad-p">Деятельностный метод обучения математике, формирующий устойчивые навыки и интерес.</p></article>
+          <article class="acad-card"><span class="acad-num">04</span><h3 class="acad-h3">Платформа QALAN</h3><p class="acad-p">Современная цифровая образовательная платформа для отслеживания прогресса ребёнка.</p></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLUBS -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="clubs-header">
+        <div style="max-width:36rem;">
+          <span class="eyebrow">Инфраструктура и кружки</span>
+          <h2 style="margin-top:1.25rem;font-size:clamp(1.5rem,3vw,2.2rem);">Развитие за пределами уроков</h2>
+          <p style="margin-top:1rem;font-size:1rem;line-height:1.75;color:rgba(51,65,85,.8);">Спорт, искусство, технологии и интеллект — каждый ребёнок находит своё увлечение. Все кружки уже входят в стоимость.</p>
+        </div>
+        <a class="btn btn--green" onclick="navigate('admissions');return false;" href="#admissions" style="flex-shrink:0;">Узнать о стоимости</a>
+      </div>
+      <div class="grid-4">
+        <div class="club-card"><span class="club-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18c1.5 0 1.5 1 3 1s1.5-1 3-1 1.5 1 3 1 1.5-1 3-1 1.5 1 3 1 1.5-1 3-1"/><path d="M2 14c1.5 0 1.5 1 3 1s1.5-1 3-1 1.5 1 3 1 1.5-1 3-1 1.5 1 3 1 1.5-1 3-1"/><path d="M9 13V5a2 2 0 0 1 4 0M15 13V5"/></svg></span><div><p class="club-name">Бассейн</p><p class="club-cat">Спорт</p></div></div>
+        <div class="club-card"><span class="club-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v6l-4 8M12 13l4 8M6 11l6-2 6 2"/></svg></span><div><p class="club-name">Дзюдо</p><p class="club-cat">Спорт</p></div></div>
+        <div class="club-card"><span class="club-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v7M8 21l4-7 4 7M5 10l7 1 7-3"/></svg></span><div><p class="club-name">Карате</p><p class="club-cat">Спорт</p></div></div>
+        <div class="club-card"><span class="club-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="5"/><path d="m13 13 6 6M17 17l2-2"/></svg></span><div><p class="club-name">Настольный теннис</p><p class="club-cat">Спорт</p></div></div>
+        <div class="club-card"><span class="club-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4" r="2"/><path d="M5 9c3 2 11 2 14 0M9 20l3-9 3 9"/></svg></span><div><p class="club-name">Гимнастика</p><p class="club-cat">Спорт</p></div></div>
+        <div class="club-card"><span class="club-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="8" width="12" height="10" rx="2"/><path d="M12 8V5M9 2h6M9 13h.01M15 13h.01M4 12H2M22 12h-2"/></svg></span><div><p class="club-name">Робототехника</p><p class="club-cat">STEM</p></div></div>
+        <div class="club-card"><span class="club-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7Z"/><path d="m3 7 9 5 9-5M12 12v10"/></svg></span><div><p class="club-name">3D-моделирование</p><p class="club-cat">STEM</p></div></div>
+        <div class="club-card"><span class="club-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21h6M10 21l1-6h2l1 6M8 9h8l-1 6H9ZM10 9V6a2 2 0 0 1 4 0v3"/></svg></span><div><p class="club-name">Шахматы</p><p class="club-cat">Интеллект</p></div></div>
+        <div class="club-card"><span class="club-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v4M8 21h8"/></svg></span><div><p class="club-name">Вокал</p><p class="club-cat">Искусство</p></div></div>
+        <div class="club-card"><span class="club-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5s2-1 4 0 4 0 4 0v6a4 4 0 0 1-8 0Z"/><path d="M13 9s2-1 4 0 4 0 4 0v4a4 4 0 0 1-8 0Z"/></svg></span><div><p class="club-name">Театральное искусство</p><p class="club-cat">Искусство</p></div></div>
+        <div class="club-card"><span class="club-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4" r="2"/><path d="M13 6v6l-5 9M13 12l4 9M9 9l8-2"/></svg></span><div><p class="club-name">Хореография</p><p class="club-cat">Искусство</p></div></div>
+        <div class="club-card"><span class="club-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3c2 0 4 2 4 4 0 3-4 4-7 8-2 2.5-3 5-6 5a4 4 0 0 1-4-4c0-3 2.5-4 5-6 4-3 5-7 8-7Z"/><circle cx="9" cy="15" r="1.5"/></svg></span><div><p class="club-name">Домбра</p><p class="club-cat">Искусство</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIPELINE -->
+  <section class="sec sec--green">
+    <div class="wrap">
+      <div class="sec-header sec-header--center sec-header--light">
+        <span class="eyebrow eyebrow--light eyebrow--center">Поступающим</span>
+        <h2>Три шага до зачисления</h2>
+        <p>Прозрачный и понятный процесс приёма — от первой заявки до торжественного зачисления в школу.</p>
+      </div>
+      <ol class="pipeline-steps">
+        <li class="pipeline-step">
+          <div class="pipeline-step__num">01</div>
+          <h3 class="pipeline-step__h3">Онлайн-заявка</h3>
+          <p class="pipeline-step__p">Заполните короткую форму: имя ребёнка, контакты и класс поступления. Мы свяжемся в течение рабочего дня.</p>
+        </li>
+        <li class="pipeline-step">
+          <div class="pipeline-step__num">02</div>
+          <h3 class="pipeline-step__h3">Тестирование и собеседование</h3>
+          <p class="pipeline-step__p">Знакомство с ребёнком и родителями, диагностика готовности к школе и беседа об образовательных запросах семьи.</p>
+        </li>
+        <li class="pipeline-step">
+          <div class="pipeline-step__num">03</div>
+          <h3 class="pipeline-step__h3">Зачисление</h3>
+          <p class="pipeline-step__p">Подписание договора, оформление документов и торжественное зачисление в Koktal Garden School.</p>
+        </li>
+      </ol>
+      <div style="text-align:center;margin-top:3.5rem;">
+        <a class="btn btn--gold btn--lg" onclick="navigate('admissions');return false;" href="#admissions">
+          Подать заявку онлайн
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="cta-band">
+        <h2>Запишитесь на знакомство со школой</h2>
+        <p>Мы будем рады показать школу, ответить на вопросы и рассказать о программе.</p>
+        <div class="cta-band__btns">
+          <a class="btn btn--gold btn--lg" href="tel:+77004007788">+7 700 400-77-88</a>
+          <a class="btn btn--outline btn--lg" onclick="navigate('contact');return false;" href="#contact">Как добраться</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /page-home -->
+
+<!-- ══════════════════ PAGE: ABOUT ══════════════════ -->
+<div class="page" id="page-about">
+  <div class="page-header">
+    <div class="page-header__grid" aria-hidden="true"><svg width="100%" height="100%"><defs><pattern id="pg2" width="56" height="56" patternUnits="userSpaceOnUse"><path d="M56 0H0V56" fill="none" stroke="#F8F9FA" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(#pg2)"/></svg></div>
+    <div class="page-header__glow" aria-hidden="true"></div>
+    <div class="wrap" style="position:relative;">
+      <nav class="breadcrumb"><a href="#home" onclick="navigate('home');return false;">Главная</a><span class="breadcrumb__sep">/</span><span class="breadcrumb__current">О школе</span></nav>
+      <span class="eyebrow eyebrow--light" style="margin-top:1.5rem;">О нас</span>
+      <h1 class="page-header__h1">Образование, которое формирует личность</h1>
+      <p class="page-header__sub">Koktal Garden School — это гуманитарный подход, сильная академическая база и забота о каждом ребёнке в школе полного дня.</p>
+    </div>
+  </div>
+
+  <!-- Philosophy -->
+  <section class="sec">
+    <div class="wrap">
+      <div style="display:grid;gap:3.5rem;align-items:start;" class="academics-layout">
+        <div>
+          <span class="eyebrow">Философия</span>
+          <h2 style="margin-top:1.25rem;font-size:clamp(1.5rem,3vw,2.1rem);">Подход liberal arts с первого класса</h2>
+          <div style="margin-top:1.5rem;display:flex;flex-direction:column;gap:1.25rem;font-size:1rem;line-height:1.75;color:rgba(51,65,85,.8);">
+            <p>Мы верим, что начальная школа закладывает фундамент на всю жизнь. Поэтому в основе нашей программы — гуманитарный подход (liberal arts): широкий кругозор, любознательность, критическое мышление и уважение к человеку.</p>
+            <p>Обучение ведётся на трёх языках — KZ · RU · EN — и полностью соответствует ГОСО РК. В классах не более 12 учеников, что позволяет педагогу видеть и поддерживать каждого ребёнка.</p>
+            <p>Воспитание ценностей идёт рука об руку с академическими достижениями: мы помогаем детям расти ответственными, добрыми и уверенными в себе.</p>
+          </div>
+        </div>
+        <aside class="contact-info-card">
+          <h3 style="font-size:1.1rem;font-weight:600;margin-bottom:1.5rem;">Коротко о школе</h3>
+          <dl style="display:flex;flex-direction:column;gap:.1rem;">
+            <div class="info-row" style="background:none;padding:.85rem 0;border-bottom:1px solid rgba(13,68,40,.08);">
+              <dt>Классы</dt><dd>0 (подготовительный) – 4 класс</dd>
+            </div>
+            <div class="info-row" style="background:none;padding:.85rem 0;border-bottom:1px solid rgba(13,68,40,.08);">
+              <dt>Наполняемость</dt><dd>до 12 учеников</dd>
+            </div>
+            <div class="info-row" style="background:none;padding:.85rem 0;border-bottom:1px solid rgba(13,68,40,.08);">
+              <dt>Языки</dt><dd>KZ · RU · EN</dd>
+            </div>
+            <div class="info-row" style="background:none;padding:.85rem 0;">
+              <dt>Режим</dt><dd>08:00 – 18:00</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Math systems -->
+  <section class="sec sec--white">
+    <div class="wrap">
+      <div class="sec-header sec-header--center">
+        <span class="eyebrow eyebrow--center">Академические системы</span>
+        <h2>Математика мирового уровня</h2>
+        <p>Мы объединяем государственный стандарт с международной программой Pearson, деятельностной методикой Л.Г. Петерсон и цифровой платформой QALAN.</p>
+      </div>
+      <div class="grid-4">
+        <article class="acad-card"><span class="acad-num">01</span><h3 class="acad-h3">ГОСО РК</h3><p class="acad-p">Обучение полностью соответствует Государственному общеобязательному стандарту образования Республики Казахстан.</p></article>
+        <article class="acad-card"><span class="acad-num">02</span><h3 class="acad-h3">Pearson Math</h3><p class="acad-p">Международная программа по математике от Pearson для развития логического и аналитического мышления.</p></article>
+        <article class="acad-card"><span class="acad-num">03</span><h3 class="acad-h3">Система Л.Г. Петерсон</h3><p class="acad-p">Деятельностный метод обучения математике, формирующий устойчивые навыки и интерес к предмету.</p></article>
+        <article class="acad-card"><span class="acad-num">04</span><h3 class="acad-h3">Платформа QALAN</h3><p class="acad-p">Современная цифровая образовательная платформа для отслеживания прогресса и вовлечённого обучения.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specialists -->
+  <section class="sec sec--green">
+    <div class="wrap">
+      <div style="display:grid;gap:3.5rem;align-items:center;" class="academics-layout">
+        <div>
+          <span class="eyebrow eyebrow--light">Сопровождение</span>
+          <h2 style="margin-top:1.25rem;font-size:clamp(1.4rem,2.8vw,2rem);color:var(--off-white);">Поддержка специалистов на территории школы</h2>
+          <p style="margin-top:1.25rem;font-size:1rem;line-height:1.75;color:rgba(248,249,250,.75);">Рядом с ребёнком всегда есть профессионалы, которые помогают ему развиваться гармонично — и в учёбе, и эмоционально.</p>
+        </div>
+        <div class="grid-3">
+          <article class="specialist-card">
+            <span class="spec-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 0-4 4v2a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4Z"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg></span>
+            <h3 class="spec-h3">Логопеды</h3>
+            <p class="spec-p">Постановка и коррекция речи, подготовка к чтению и письму.</p>
+          </article>
+          <article class="specialist-card">
+            <span class="spec-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 0-4 4v2a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4Z"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg></span>
+            <h3 class="spec-h3">Психологи</h3>
+            <p class="spec-p">Сопровождение адаптации, эмоционального развития и комфорта ребёнка.</p>
+          </article>
+          <article class="specialist-card">
+            <span class="spec-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 0-4 4v2a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4Z"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg></span>
+            <h3 class="spec-h3">Педагоги-наставники</h3>
+            <p class="spec-p">Индивидуальное сопровождение учебной траектории каждого ученика.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="text-align:center;">
+    <div class="wrap">
+      <h2 style="font-size:clamp(1.4rem,2.5vw,2rem);">Хотите узнать больше?</h2>
+      <p style="margin-top:1rem;color:rgba(51,65,85,.8);">Запишитесь на экскурсию по школе и познакомьтесь с педагогами лично.</p>
+      <div style="margin-top:2rem;display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
+        <a class="btn btn--gold btn--lg" onclick="navigate('admissions');return false;" href="#admissions">Поступающим</a>
+        <a class="btn btn--green btn--lg" onclick="navigate('contact');return false;" href="#contact">Контакты</a>
+      </div>
+    </div>
+  </section>
+</div><!-- /page-about -->
+
+<!-- ══════════════════ PAGE: ADMISSIONS ══════════════════ -->
+<div class="page" id="page-admissions">
+  <div class="page-header">
+    <div class="page-header__grid" aria-hidden="true"><svg width="100%" height="100%"><defs><pattern id="pg3" width="56" height="56" patternUnits="userSpaceOnUse"><path d="M56 0H0V56" fill="none" stroke="#F8F9FA" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(#pg3)"/></svg></div>
+    <div class="page-header__glow" aria-hidden="true"></div>
+    <div class="wrap" style="position:relative;">
+      <nav class="breadcrumb"><a href="#home" onclick="navigate('home');return false;">Главная</a><span class="breadcrumb__sep">/</span><span class="breadcrumb__current">Поступающим</span></nav>
+      <span class="eyebrow eyebrow--light" style="margin-top:1.5rem;">Приём 2025–2026</span>
+      <h1 class="page-header__h1">Поступление в Koktal Garden School</h1>
+      <p class="page-header__sub">Прозрачные условия, понятная стоимость и простой путь зачисления. Оставьте заявку — мы свяжемся с вами в течение рабочего дня.</p>
+    </div>
+  </div>
+
+  <!-- Pricing -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-header sec-header--center">
+        <span class="eyebrow eyebrow--center">Стоимость обучения</span>
+        <h2>Тарифы по классам</h2>
+        <p>В стоимость входит 4-разовое питание и кружки после уроков.</p>
+      </div>
+      <div class="pricing-grid">
+        <!-- Card 1 -->
+        <article class="price-card price-card--base">
+          <p class="price-card__sub">Grade 0 · Prep</p>
+          <h3 class="price-card__title">Подготовительный класс (0)</h3>
+          <div class="price-card__amount">
+            <span class="price-val">100 000</span>
+            <span class="price-unit">₸</span>
+            <span class="price-period">/ в месяц</span>
+          </div>
+          <ul class="price-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Трёхъязычная программа (KZ · RU · EN)</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Группы до 12 детей</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>4-разовое питание</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Кружки после уроков</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Пребывание 08:00 – 18:00</span></li>
+          </ul>
+          <div class="price-card__cta"><a class="btn btn--green" style="width:100%;" href="#apply" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'});return false;">Выбрать тариф</a></div>
+        </article>
+        <!-- Card 2 -->
+        <article class="price-card price-card--highlight">
+          <span class="price-card__badge">Популярный</span>
+          <p class="price-card__sub">Grades 1–4</p>
+          <h3 class="price-card__title">1 – 4 классы</h3>
+          <div class="price-card__amount">
+            <span class="price-val">200 000</span>
+            <span class="price-unit">₸</span>
+            <span class="price-period">/ в месяц</span>
+          </div>
+          <ul class="price-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Госстандарт РК + Pearson Math + Л.Г. Петерсон</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Платформа QALAN</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Классы до 12 учеников</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>4-разовое питание</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Кружки и секции после уроков</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Полный день 08:00 – 18:00</span></li>
+          </ul>
+          <div class="price-card__cta"><a class="btn btn--gold" style="width:100%;" href="#apply" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'});return false;">Выбрать тариф</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pipeline (reused) -->
+  <section class="sec sec--green">
+    <div class="wrap">
+      <div class="sec-header sec-header--center sec-header--light">
+        <span class="eyebrow eyebrow--light eyebrow--center">Процесс поступления</span>
+        <h2>Три шага до зачисления</h2>
+        <p>Прозрачный и понятный процесс приёма — от первой заявки до торжественного зачисления.</p>
+      </div>
+      <ol class="pipeline-steps">
+        <li class="pipeline-step"><div class="pipeline-step__num">01</div><h3 class="pipeline-step__h3">Онлайн-заявка</h3><p class="pipeline-step__p">Заполните форму ниже: имя ребёнка, контакты и класс. Мы свяжемся с вами в течение рабочего дня.</p></li>
+        <li class="pipeline-step"><div class="pipeline-step__num">02</div><h3 class="pipeline-step__h3">Тестирование и собеседование</h3><p class="pipeline-step__p">Знакомство, диагностика готовности к школе и беседа об образовательных запросах семьи.</p></li>
+        <li class="pipeline-step"><div class="pipeline-step__num">03</div><h3 class="pipeline-step__h3">Зачисление</h3><p class="pipeline-step__p">Подписание договора, оформление документов и зачисление в Koktal Garden School.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Application form -->
+  <section class="sec sec--white" id="apply">
+    <div class="wrap">
+      <div class="apply-layout">
+        <div>
+          <span class="eyebrow">Онлайн-заявка</span>
+          <h2 style="margin-top:1.25rem;font-size:clamp(1.4rem,2.8vw,2.1rem);">Оставьте заявку на поступление</h2>
+          <p style="margin-top:1.25rem;font-size:1rem;line-height:1.75;color:rgba(51,65,85,.8);">Заполните короткую форму, и наш администратор свяжется с вами, чтобы согласовать удобное время для знакомства и собеседования.</p>
+          <ul style="margin-top:2rem;display:flex;flex-direction:column;gap:1.25rem;">
+            <li style="display:flex;align-items:center;gap:.75rem;">
+              <svg style="width:1.25rem;height:1.25rem;color:var(--gold-xdark);flex-shrink:0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+              <a href="tel:+77004007788" style="font-weight:700;color:var(--green);">+7 700 400-77-88</a>
+            </li>
+            <li style="display:flex;align-items:center;gap:.75rem;">
+              <svg style="width:1.25rem;height:1.25rem;color:var(--gold-xdark);flex-shrink:0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+              <a href="mailto:info@kgs.edu.kz" style="font-weight:700;color:var(--green);">info@kgs.edu.kz</a>
+            </li>
+            <li style="display:flex;align-items:start;gap:.75rem;">
+              <svg style="width:1.25rem;height:1.25rem;color:var(--gold-xdark);flex-shrink:0;margin-top:.15rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span style="font-size:.9rem;color:var(--slate);">Астана, район Сарыарка, жилой массив Коктал, переулок Мойнақ, 14</span>
+            </li>
+          </ul>
+        </div>
+        <div class="form-card">
+          <form id="apply-form" novalidate>
+            <div class="form-field">
+              <label class="form-label" for="f-name">Имя ребёнка и родителя <span>*</span></label>
+              <input class="form-input" type="text" id="f-name" name="name" required placeholder="Напр.: Алишер (мама — Динара)"/>
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="f-phone">Телефон <span>*</span></label>
+              <input class="form-input" type="tel" id="f-phone" name="phone" required placeholder="+7 (___) ___-__-__"/>
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="f-grade">Класс поступления <span>*</span></label>
+              <select class="form-select" id="f-grade" name="grade" required>
+                <option value="" disabled selected>Выберите класс</option>
+                <option>0 класс (подготовительный)</option>
+                <option>1 класс</option>
+                <option>2 класс</option>
+                <option>3 класс</option>
+                <option>4 класс</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="f-comment">Комментарий (необязательно)</label>
+              <textarea class="form-textarea" id="f-comment" name="comment" rows="3" placeholder="Вопросы или пожелания"></textarea>
+            </div>
+            <button class="btn btn--gold" style="width:100%;font-size:1rem;padding:1rem;" type="submit">
+              Отправить заявку
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <p class="form-note">Нажимая «Отправить», вы соглашаетесь на обработку персональных данных.</p>
+            <div class="form-success" id="form-success">Спасибо! Ваша заявка отправлена — мы свяжемся с вами в ближайшее время.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /page-admissions -->
+
+<!-- ══════════════════ PAGE: CONTACT ══════════════════ -->
+<div class="page" id="page-contact">
+  <div class="page-header">
+    <div class="page-header__grid" aria-hidden="true"><svg width="100%" height="100%"><defs><pattern id="pg4" width="56" height="56" patternUnits="userSpaceOnUse"><path d="M56 0H0V56" fill="none" stroke="#F8F9FA" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(#pg4)"/></svg></div>
+    <div class="page-header__glow" aria-hidden="true"></div>
+    <div class="wrap" style="position:relative;">
+      <nav class="breadcrumb"><a href="#home" onclick="navigate('home');return false;">Главная</a><span class="breadcrumb__sep">/</span><span class="breadcrumb__current">Контакты</span></nav>
+      <span class="eyebrow eyebrow--light" style="margin-top:1.5rem;">Связаться с нами</span>
+      <h1 class="page-header__h1">Мы всегда на связи</h1>
+      <p class="page-header__sub">Позвоните, напишите или приезжайте — будем рады познакомить вас со школой Koktal Garden School.</p>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="wrap">
+      <div style="display:grid;gap:3rem;align-items:start;" class="academics-layout">
+        <div>
+          <span class="eyebrow">Контактная информация</span>
+          <h2 style="margin-top:1.25rem;font-size:clamp(1.5rem,3vw,2.1rem);">Как с нами связаться</h2>
+          <div class="contact-info-card" style="margin-top:2rem;">
+            <div class="cinfo-address">
+              <span class="cinfo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <div><p class="cinfo-label">Адрес</p><p class="cinfo-val">Астана, район Сарыарка, жилой массив Коктал, переулок Мойнақ, 14</p></div>
+            </div>
+            <div class="cinfo-grid">
+              <div class="cinfo-item"><span class="cinfo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span><p class="cinfo-label">Телефон</p><a href="tel:+77004007788">+7 700 400-77-88</a></div>
+              <div class="cinfo-item"><span class="cinfo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span><p class="cinfo-label">E-mail</p><a href="mailto:info@kgs.edu.kz">info@kgs.edu.kz</a></div>
+              <div class="cinfo-item"><span class="cinfo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><p class="cinfo-label">Режим работы</p><a href="#">Пн–Пт, 08:00–18:00</a></div>
+            </div>
+            <div class="socials-strip">
+              <a class="social-btn" href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+              <a class="social-btn" href="https://wa.me/77004007788" target="_blank" rel="noopener">WhatsApp</a>
+              <a class="social-btn" href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
+            </div>
+          </div>
+          <a class="btn btn--gold btn--lg" style="margin-top:2rem;" onclick="navigate('admissions');return false;" href="#admissions">Оставить заявку на поступление</a>
+        </div>
+        <div>
+          <div class="map-card">
+            <div class="map-card__header">
+              <p>Мы на карте</p>
+              <p>ж/м Коктал, пер. Мойнақ, 14, Астана</p>
+            </div>
+            <iframe
+              title="Карта проезда — Koktal Garden School"
+              src="https://www.google.com/maps?q=Astana+Koktal+Moynak+14&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /page-contact -->
+
+</main>
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer id="site-footer">
+  <div class="footer-accent"></div>
+  <div class="wrap footer-grid">
+    <!-- Brand -->
+    <div class="footer-brand">
+      <a class="logo logo--light" onclick="navigate('home');return false;" href="#home">
+        <svg class="logo__crest" viewBox="0 0 48 48" aria-hidden="true">
+          <path d="M24 2 L43 9 V24 C43 36 34 43 24 46 C14 43 5 36 5 24 V9 Z" fill="none" stroke="#F8F9FA" stroke-width="2"/>
+          <path d="M24 6 L39 11.5 V24 C39 33.5 31.5 39.5 24 42 C16.5 39.5 9 33.5 9 24 V11.5 Z" fill="#F8F9FA" opacity=".07"/>
+          <path d="M24 12 C30 17 31 25 24 34 C17 25 18 17 24 12 Z" fill="#D4AF37"/>
+          <path d="M24 14 V32" stroke="#F8F9FA" stroke-width="1.4" opacity=".55"/>
+        </svg>
+        <span class="logo__text">
+          <span class="logo__name">Koktal&nbsp;<span>Garden</span></span>
+          <span class="logo__sub">School · Astana</span>
+        </span>
+      </a>
+      <p>Частная начальная школа «Коктал Гарден». Трёхъязычное обучение, малые классы до 12 учеников и полный день под заботой педагогов.</p>
+      <div class="footer-socials">
+        <a class="footer-social" href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+        <a class="footer-social" href="https://wa.me/77004007788" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="footer-social" href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
+      </div>
+    </div>
+    <!-- Nav -->
+    <div>
+      <p class="footer-col-title">Навигация</p>
+      <nav class="footer-nav-links">
+        <a class="footer-nav-link" onclick="navigate('home');return false;" href="#home">Главная</a>
+        <a class="footer-nav-link" onclick="navigate('about');return false;" href="#about">О школе</a>
+        <a class="footer-nav-link" onclick="navigate('admissions');return false;" href="#admissions">Поступающим</a>
+        <a class="footer-nav-link" onclick="navigate('contact');return false;" href="#contact">Контакты</a>
+      </nav>
+    </div>
+    <!-- Clubs -->
+    <div>
+      <p class="footer-col-title">Кружки</p>
+      <ul class="footer-club-list">
+        <li class="footer-club">Бассейн</li>
+        <li class="footer-club">Дзюдо</li>
+        <li class="footer-club">Карате</li>
+        <li class="footer-club">Гимнастика</li>
+        <li class="footer-club">Робототехника</li>
+        <li class="footer-club">Шахматы</li>
+      </ul>
+    </div>
+    <!-- Contacts -->
+    <div>
+      <p class="footer-col-title">Контакты</p>
+      <ul class="footer-contact-list">
+        <li class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Астана, район Сарыарка, жилой массив Коктал, переулок Мойнақ, 14</span>
+        </li>
+        <li class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          <a href="tel:+77004007788">+7 700 400-77-88</a>
+        </li>
+        <li class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          <a href="mailto:info@kgs.edu.kz">info@kgs.edu.kz</a>
+        </li>
+        <li class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <span>Пн–Пт, 08:00 – 18:00</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2025 Koktal Garden School. Все права защищены.</span>
+    <span>г. Астана, Республика Казахстан · ГОСО РК</span>
+  </div>
+</footer>
+
+<script>
+// ── ROUTING ──────────────────────────────────────────────
+const pages = ['home','about','admissions','contact'];
+
+function navigate(id) {
+  pages.forEach(p => {
+    const page = document.getElementById('page-'+p);
+    const desktopLink = document.querySelector(`.nav-link[href="#${p}"]`);
+    const mobileLink  = document.querySelector(`.mobile-menu__link[href="#${p}"]`);
+    const footerLink  = document.querySelector(`.footer-nav-link[href="#${p}"]`);
+    if (page) page.classList.toggle('active', p === id);
+    if (desktopLink) desktopLink.classList.toggle('active', p === id);
+    if (mobileLink)  mobileLink.classList.toggle('active', p === id);
+  });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  history.pushState(null, '', '#' + id);
+}
+
+// handle back/forward
+window.addEventListener('popstate', () => {
+  const id = location.hash.replace('#','') || 'home';
+  if (pages.includes(id)) navigate(id);
+});
+
+// on load
+(function() {
+  const id = location.hash.replace('#','') || 'home';
+  if (pages.includes(id)) navigate(id);
+})();
+
+// ── HERO SLIDER ───────────────────────────────────────────
+(function() {
+  const slides = document.querySelectorAll('.hero__slide');
+  const dots   = document.querySelectorAll('.hero__dot');
+  let cur = 0, timer;
+
+  function show(i) {
+    slides.forEach((s,j) => s.classList.toggle('active', j === i));
+    dots.forEach((d,j) => d.classList.toggle('active', j === i));
+    cur = i;
+  }
+  function next() { show((cur+1) % slides.length); }
+  function start() { timer = setInterval(next, 4000); }
+  function stop()  { clearInterval(timer); }
+
+  dots.forEach((d,i) => d.addEventListener('click', () => { stop(); show(i); start(); }));
+  start();
+})();
+
+// ── MOBILE MENU ───────────────────────────────────────────
+const hamburger  = document.getElementById('hamburger-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const iconOpen   = document.getElementById('icon-open');
+const iconClose  = document.getElementById('icon-close');
+
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.setAttribute('aria-expanded','false');
+  iconOpen.style.display  = '';
+  iconClose.style.display = 'none';
+}
+
+hamburger.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', String(isOpen));
+  iconOpen.style.display  = isOpen ? 'none' : '';
+  iconClose.style.display = isOpen ? '' : 'none';
+});
+
+// ── FORM ──────────────────────────────────────────────────
+const form    = document.getElementById('apply-form');
+const success = document.getElementById('form-success');
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  if (!form.checkValidity()) { form.reportValidity(); return; }
+  console.log('Заявка:', Object.fromEntries(new FormData(form)));
+  form.reset();
+  success.classList.add('show');
+  success.scrollIntoView({ behavior:'smooth', block:'center' });
+});
+</script>
+</body>
+</html>
